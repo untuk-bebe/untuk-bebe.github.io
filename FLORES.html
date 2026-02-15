@@ -368,7 +368,13 @@ setInterval(createHeart, 400);
         allowfullscreen>
     </iframe>
 </div>
-
+<script>
+  // Di HP, harus ada interaksi fisik (klik) untuk mulai suara
+  document.body.addEventListener('click', function() {
+      var audio = document.getElementById("audio");
+      audio.play();
+  }, { once: true });
+</script>
 <script>
     // Karena browser memblokir autoplay, musik akan berputar otomatis 
     // segera setelah user mengklik area mana saja di halaman ini.
